@@ -1,0 +1,45 @@
+<% include ./includes/header %>
+    <% include ./includes/nav %>
+        <br>
+
+        <body class="style">
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <img src="<%= data.image %>">
+                        <h3>
+                            <%= data.firstname %>
+                                <%= data.lastname %>
+                        </h3>
+                        
+                        <h3>
+                            <%= data.gender %>
+                        </h3>
+                        <h3>
+                            <%= data.address %>
+                        </h3>
+                        <h3>
+                            <%= data.email%>
+                        </h3>
+                        
+                        <h3>
+                            <%= data.state %>
+                        </h3>
+                        
+                        <h3>
+                            <%= data.course%>
+                        </h3>
+                       
+                        <form method="POST" action="/student/<%= data._id %>?_method=DELETE">
+                            <button>Delete</button>
+                            <a href="/edit_student<%= data._id %>">Edit</a>
+                        </form>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </body>
